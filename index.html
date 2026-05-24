@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Level 24 — Tania</title>
+
+  <link rel="stylesheet" href="tania.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="asset/audio/snowfall.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- VOICE NOTE -->
+  <audio id="voiceNote">
+    <source src="asset/audio/vn.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- GRAIN EFFECT -->
+  <div class="grain"></div>
+
+  <!-- HERO -->
+  <section class="hero active" id="hero">
+
+    <div class="overlay"></div>
+
+    <!-- OPENING PHOTO -->
+    <img src="asset/image/opening.jpg" class="hero-image">
+
+    <div class="hero-content">
+
+      <p class="mini-title">Level 24</p>
+
+      <h1>
+        24 years ago,<br>
+        someone special was born.
+      </h1>
+
+      <p class="subtitle">
+        and somehow,<br>
+        she found her way into my life.
+      </p>
+
+      <button id="startBtn">
+        Enter
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ROOM 1 -->
+  <section class="room" id="room1">
+
+    <div class="room-content">
+
+      <p class="room-number">Room 01</p>
+
+      <h2>Initial Pattern</h2>
+
+      <p class="room-text">
+        semua berawal dari kamu,<br>
+        dan berakhir dari kamu.
+      </p>
+
+      <div class="pattern-grid">
+
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+
+      </div>
+
+      <input 
+        type="text" 
+        id="room1Answer" 
+        placeholder="type the initials..."
+      >
+
+      <button id="room1Btn">
+        Verify
+      </button>
+
+      <button 
+        class="next-room hidden"
+        id="room1Next"
+        data-next="room2"
+      >
+        Continue
+      </button>
+
+      <div class="gift-reveal">
+        Gift 01 — Tumbler
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ROOM 2 -->
+  <section class="room" id="room2">
+
+    <div class="room-content">
+
+      <p class="room-number">Room 02</p>
+
+      <h2>Memory Sequence</h2>
+
+      <div class="memory-cards">
+
+        <div class="memory-card">Ungu</div>
+        <div class="memory-card">Mie</div>
+        <div class="memory-card">Makmur Jaya</div>
+        <div class="memory-card">Pelukan Ardi</div>
+        <div class="memory-card">Breakbeat</div>
+        <div class="memory-card">Jahilin Ardi</div>
+
+      </div>
+
+      <input 
+        type="text" 
+        id="room2Answer"
+        placeholder="what is her favorite color?"
+      >
+
+      <button id="room2Btn">
+        Verify
+      </button>
+
+      <button 
+        class="next-room hidden"
+        id="room2Next"
+        data-next="room3"
+      >
+        Continue
+      </button>
+
+      <div class="gift-reveal">
+        Gift 02 — Tas
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ROOM 3 -->
+  <section class="room" id="room3">
+
+    <div class="room-content narrow">
+
+      <p class="room-number">Room 03</p>
+
+      <h2>Decode Message</h2>
+
+      <div class="cipher-box">
+        pdndvlk vd|dqj... ndpx shuhpsxdq |dqj khedw.
+      </div>
+
+      <div class="clue-box">
+        <p> d → a </p>
+          <p> e → b </p>
+          <p>f → c </p>
+      </div>
+
+      <input 
+        type="text"
+        id="room3Answer"
+        placeholder="decode the message..."
+      >
+
+      <button id="room3Btn">
+        Verify
+      </button>
+
+      <button 
+        class="next-room hidden"
+        id="room3Next"
+        data-next="room4"
+      >
+        Continue
+      </button>
+
+      <div class="gift-reveal">
+        Gift 03 — Sepatu
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ROOM 4 -->
+  <section class="room" id="room4">
+
+    <div class="room-content">
+
+      <p class="room-number">Room 04</p>
+
+      <h2>Silhouette</h2>
+
+      <div class="silhouette-container">
+
+        <!-- SILHOUETTE PHOTO -->
+        <img 
+          src="asset/image/1000432562.jpg" 
+          class="silhouette-image"
+        >
+
+      </div>
+
+      <button 
+        class="next-room"
+        data-next="room5"
+      >
+        Reveal
+      </button>
+
+      <div class="gift-reveal">
+        Gift 04 — Parfume
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ROOM 5 -->
+  <section class="room" id="room5">
+
+    <div class="room-content">
+
+      <p class="room-number">Room 05</p>
+
+      <h2>Personality Reconstruction</h2>
+
+      <div class="traits">
+
+        <span>Ceria</span>
+        <span>Jahil</span>
+        <span>Sabar</span>
+        <span>Penyayang</span>
+        <span>Pengertian</span>
+        <span>Pendengar</span>
+        <span>Aktif</span>
+        <span>Mendahulukan Orang Lain</span>
+        <span>Gemesan</span>
+
+      </div>
+
+      <p class="generated-text">
+        you make people feel safe without even trying.
+      </p>
+
+      <button 
+        class="next-room"
+        data-next="room6"
+      >
+        Continue
+      </button>
+
+      <div class="gift-reveal">
+        Gift 05 — Cincin
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ROOM 6 -->
+  <section class="room" id="room6">
+
+    <div class="room-content narrow">
+
+      <p class="room-number">Room 06</p>
+
+      <h2>Final Password</h2>
+
+      <p class="room-text">
+        yang paling kamu mau.
+      </p>
+
+      <input 
+        type="password"
+        id="passwordInput"
+        placeholder="type here..."
+      >
+
+      <button id="passwordBtn">
+        Unlock
+      </button>
+
+      <div class="gift-reveal">
+        Gift 06 — Gelang
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ENDING -->
+  <section class="ending" id="ending">
+
+    <!-- ENDING PHOTO -->
+    <img 
+      src="asset/image/close.jpg"
+      class="ending-image"
+    >
+
+    <div class="overlay"></div>
+
+    <div class="ending-content">
+
+      <p class="ending-small">
+        for tania eunike
+      </p>
+
+      <h2>
+        kamu wanita kuat<br>
+        yang udah melewati pahitnya dunia.
+      </h2>
+
+      <p>
+        dan selama aku masih ada,<br>
+        aku akan terus nemenin kamu.
+      </p>
+
+      <button id="playVN">
+        Play Voice Note
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <script src="cantik.js"></script>
+
+</body>
+</html>
